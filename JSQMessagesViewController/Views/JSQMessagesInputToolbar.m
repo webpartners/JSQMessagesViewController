@@ -51,7 +51,7 @@ static void * kJSQMessagesInputToolbarKeyValueObservingContext = &kJSQMessagesIn
     self.jsq_isObserving = NO;
     self.sendButtonOnRight = YES;
 
-    self.preferredDefaultHeight = 44.0f;
+    self.preferredDefaultHeight = [self toolbarHeight];
     self.maximumHeight = NSNotFound;
 
     JSQMessagesToolbarContentView *toolbarContentView = [self loadToolbarContentView];
@@ -187,5 +187,7 @@ static void * kJSQMessagesInputToolbarKeyValueObservingContext = &kJSQMessagesIn
     
     _jsq_isObserving = NO;
 }
-
+- (CGFloat) toolbarHeight{
+    return 44;
+}
 @end

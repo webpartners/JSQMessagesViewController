@@ -107,4 +107,6 @@
  */
 - (JSQMessagesToolbarContentView *)loadToolbarContentView;
 
+
+- (CGFloat) toolbarHeight;
 @end
