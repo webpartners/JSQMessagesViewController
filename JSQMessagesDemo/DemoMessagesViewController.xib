@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DemoMessagesViewController">
+            <connections>
+                <outlet property="collectionView" destination="eT8-CI-qQm" id="qFc-HY-5sK"/>
+                <outlet property="inputToolbar" destination="4LF-LL-V1T" id="VPP-dY-Qi6"/>
+                <outlet property="toolbarBottomLayoutGuide" destination="3Hd-Aq-7KM" id="2va-lH-Rys"/>
+                <outlet property="toolbarHeightConstraint" destination="NHb-Zs-vcv" id="Rrq-0H-jd5"/>
+                <outlet property="view" destination="hSj-5T-MpL" id="r8L-4J-73i"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="hSj-5T-MpL">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eT8-CI-qQm" customClass="JSQMessagesCollectionView">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewLayout key="collectionViewLayout" id="BmN-jI-gNU" customClass="JSQMessagesCollectionViewFlowLayout"/>
+                    <cells/>
+                </collectionView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4LF-LL-V1T" customClass="DemoToolbar">
+                    <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="NHb-Zs-vcv"/>
+                    </constraints>
+                    <items/>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="4LF-LL-V1T" secondAttribute="bottom" id="3Hd-Aq-7KM"/>
+                <constraint firstItem="4LF-LL-V1T" firstAttribute="leading" secondItem="hSj-5T-MpL" secondAttribute="leading" id="DD4-Kw-YY8"/>
+                <constraint firstAttribute="trailing" secondItem="4LF-LL-V1T" secondAttribute="trailing" id="FHS-dd-dIC"/>
+                <constraint firstItem="eT8-CI-qQm" firstAttribute="leading" secondItem="hSj-5T-MpL" secondAttribute="leading" id="W2H-G0-5fe"/>
+                <constraint firstAttribute="trailing" secondItem="eT8-CI-qQm" secondAttribute="trailing" id="Ye0-Oz-hRd"/>
+                <constraint firstAttribute="bottom" secondItem="eT8-CI-qQm" secondAttribute="bottom" id="Zji-Dm-X95"/>
+                <constraint firstItem="eT8-CI-qQm" firstAttribute="top" secondItem="hSj-5T-MpL" secondAttribute="top" id="vJY-yh-UDw"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+        </view>
+    </objects>
+</document>

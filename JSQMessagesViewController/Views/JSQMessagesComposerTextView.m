@@ -32,7 +32,7 @@
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     CGFloat cornerRadius = 6.0f;
-    
+    self.placeholderOffset = CGPointMake(7.0, 5.0);
     self.backgroundColor = [UIColor whiteColor];
     self.layer.borderWidth = 0.5f;
     self.layer.borderColor = [UIColor lightGrayColor].CGColor;
@@ -156,7 +156,7 @@
     if ([self.text length] == 0 && self.placeHolder) {
         [self.placeHolderTextColor set];
         
-        [self.placeHolder drawInRect:CGRectInset(rect, 7.0f, 5.0f)
+        [self.placeHolder drawInRect:CGRectInset(rect, self.placeholderOffset.x, self.placeholderOffset.y)
                       withAttributes:[self jsq_placeholderTextAttributes]];
     }
 }
@@ -213,5 +213,7 @@
               NSForegroundColorAttributeName : self.placeHolderTextColor,
               NSParagraphStyleAttributeName : paragraphStyle };
 }
+
+
 
 @end

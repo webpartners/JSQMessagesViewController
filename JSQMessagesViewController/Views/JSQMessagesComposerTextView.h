@@ -57,6 +57,11 @@
  */
 @property (weak, nonatomic) id<JSQMessagesComposerTextViewPasteDelegate> pasteDelegate;
 
+/** Defines offset points for placeholder text. Useful if you override toolbar height.
+ *
+ */
+@property (assign, nonatomic) CGPoint  placeholderOffset;
+
 /**
  *  Determines whether or not the text view contains text after trimming white space 
  *  from the front and back of its string.
@@ -64,5 +69,7 @@
  *  @return `YES` if the text view contains text, `NO` otherwise.
  */
 - (BOOL)hasText;
+
+
 
 @end
