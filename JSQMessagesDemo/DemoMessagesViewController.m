@@ -17,8 +17,24 @@
 //
 
 #import "DemoMessagesViewController.h"
+#import "DemoToolbar.h"
 
 @implementation DemoMessagesViewController
+
+#pragma mark - Class methods
+
+
++ (UINib *)nib
+{
+    return [UINib nibWithNibName:NSStringFromClass([DemoMessagesViewController class])
+                          bundle:[NSBundle bundleForClass:[DemoMessagesViewController class]]];
+}
+
++ (instancetype)messagesViewController
+{
+    return [[[self class] alloc] initWithNibName:NSStringFromClass([DemoMessagesViewController class])
+                                          bundle:[NSBundle bundleForClass:[DemoMessagesViewController class]]];
+}
 
 #pragma mark - View lifecycle
 
@@ -93,6 +109,8 @@
      *
      *  self.inputToolbar.maximumHeight = 150;
      */
+    
+    self.inputToolbar.contentView.textView.placeholderOffset = CGPointMake(7, 12);
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -659,5 +677,7 @@
     }
     return YES;
 }
-
+- (JSQMessagesInputToolbar *) setInputToolbar{
+    return [[DemoToolbar alloc] init];
+}
 @end
